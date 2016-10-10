@@ -44,7 +44,8 @@ function setContinueResponse() {
         if (continueResponse !== 0 && continueResponse !== 1) {
             console.log(`${continueResponse} is an incorrect value. Please try again.`);
             continueResponse = 1;
-            setContinueResponse(); //improper recursion
+            setContinueResponse();
+            return main();
         }
     } else {
         continueResponse = 1;
